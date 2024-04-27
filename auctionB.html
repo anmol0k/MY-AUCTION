@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>auction hub</title>
+    <style type="text/css">
+        
+        *{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 50px;
+    background: #3d4d65;
+    z-index: 3;
+    padding: 20px 0 0;
+    position: relative;
+    }
+img{
+    margin-top: -20px;
+    height: 60pxpx;
+    width: 120px;
+    float: left;
+}
+.nav{
+    flex: 1;
+    text-align: center ;
+    color: black;
+    text-align: right;
+}
+.nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    margin-bottom: 60px;
+}
+.nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #1B0F3B ;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav ul li:hover::after{
+    width: 100%;
+}
+                                /* hub */
+
+.auc{
+
+    background-color: #F4F7FB  ;
+    height: 1000px;
+
+}
+                                /* listing live product */
+.auc-L{
+    height: 500px;
+}
+.auc-L h3{
+    color: #525256;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 36px;
+    font-weight: 600;
+}
+.auction-container-row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between; 
+}
+.auction-container-col{
+    flex-basis: 31%;
+    background: #F7FAFA;
+    border-radius: 10px;
+    border-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    border: 1px solid #B2B8B8;
+   }
+.auction-container-col {
+            float: left;
+            width: 300px;
+            height: 250px;
+            margin: 0 auto;
+            text-align: right;
+        }
+
+        #timer {
+            font-size: 24px;
+        } 
+
+.auction-container-col .strip {
+    width: 100%; 
+    height: 25px;
+    position: relative; 
+    bottom: 0;
+    margin-top: -10px;
+    border-bottom: 1px solid #B2B8B8 ; 
+}
+.auction-container-col h1{
+    color: #233761;
+}
+.auction-container-col img{
+    width: 150px;
+    height: 195px;
+    margin-top: 15px;
+    border-right: 2px solid grey;
+} 
+.auction-container-col p{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #233761;
+}
+.auction-container-col input{
+    margin-top: 30px;
+    width: 180px;
+    height: 20px;
+}
+.auction-container-col button{
+    background: #DF6A18;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: #fff;
+    height: 35px;
+    border-radius: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px 0px #B2B8B8;
+}
+                                     
+                                    /* listing upcoming product */
+.auc-U{
+    height: 500px;
+}
+
+.auc-U h3{
+    color: #525256;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+                             /* footer */
+
+
+
+.footer{
+    height: 115px;
+    background: #3d4d65;
+    position: relative;
+    z-index: 3;
+    padding: 70px 0 0;
+}
+.footer img{
+    margin-top: -70px;
+    height: 170px;
+    width: 300px;
+    float: left;
+}
+.footer .container{
+    max-width: 1150px;
+    margin: auto;
+}
+.footer .row{
+    margin-top: -45px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container ul{
+   list-style: none; 
+   cursor: pointer;
+    color: #DFDFE2 ;
+
+}
+.footer .container .col{
+    width: 20%;
+    padding: 0 10px;
+}
+.row .col h4{
+    font-size: 15px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+}
+.row .col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 60px;
+}
+.row .col ul li:not(:last-child){
+    margin-bottom: 2.5px;
+}
+.row .col ul li {
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.row .col ul li:hover{
+    color: #ffffff;
+    padding-left: 10px;
+}
+.col .social-links a{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 5px 5px 0;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+    </style>
+</head>
+<body>
+     <section class="header">
+            <nav>
+                <img src="./img/logo2.png">
+                <div class="nav" id="nav">
+                    <ul>
+                    <li><a href="auction.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="auctionB.html">AUCTION HUB</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </section>
+
+                        <!-- hub -->
+
+<section class="auc">
+    <div class="auc-L">
+    <h3 style="padding: 30px;"><i class="fa fa-grip-lines" style="font-size: 30px;"></i>&ensp; LIVE AUCTION &ensp;<i class="fa fa-grip-lines" style="font-size: 30px;"></i></h3>
+    <div class="auction-container-row">
+    <div class="auction-container-col">
+        <div class="strip">
+        <h1>Samsung S23</h1>
+        </div>
+        <img src="./img/sam.png">
+        <p>BID START FROM: ₹80000</p>
+        <p>Current Bid: <span id="current-bid">₹80000</span></p>
+        <p>AUCTION ENDS ON: <span id="timer">00:00</span></p>
+        <input type="number" id="bid-amount" placeholder="Your Bid">
+        <button id="place-bid">Place Bid</button>
+    </div>
+   
+<script>
+                    const startingPrice = 80000;
+                    const biddingTime = 120; // In seconds
+                    let currentBid = startingPrice;
+                    let timer = biddingTime;
+                    let timerInterval;
+
+                    function updateTimer() {
+                        const minutes = Math.floor(timer / 60);
+                        const seconds = timer % 60;
+                        const timerElement = document.getElementById("timer");
+                        timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                    }
+
+                    function startAuction() {
+                        updateTimer();
+                        timerInterval = setInterval(() => {
+                            if (timer === 0) {
+                                clearInterval(timerInterval);
+                                alert("Auction For Samsung S23 has ended.");
+                                disableBidding(); // Call the disableBidding function when the timer ends
+                            } else {
+                                timer--;
+                                updateTimer();
+                            }
+                        }, 1000);
+                    }
+
+                    function disableBidding() {
+                        const bidInput = document.getElementById("bid-amount");
+                        const bidButton = document.getElementById("place-bid");
+
+                        bidInput.disabled = true;
+                        bidButton.disabled = true;
+                    
+                    }
+
+                    document.getElementById("current-bid").textContent = `₹${startingPrice}`;
+
+                    document.getElementById("place-bid").addEventListener("click", () => {
+                        const bidAmount = parseFloat(document.getElementById("bid-amount").value);
+                        if (bidAmount > currentBid) {
+                            currentBid = bidAmount;
+                            document.getElementById("current-bid").textContent = `₹${currentBid}`;
+                        } else {
+                            alert("Your bid must be higher than the current bid.");
+                        }
+                    });
+
+                    startAuction();
+                </script>
+
+        
+    <div class="auction-container-col">
+        <div class="strip">
+        <h1>SHUBHAM JHA</h1>
+        </div>
+        <img src="./img/team3.jpg">
+        <p>BID START FROM: ₹169</p>
+        <p>Current Bid: <span id="current-bid-2">₹169</span></p>
+        <p>AUCTION ENDS ON: <span id="timer-2">00:00</span></p>
+        <input type="number" id="bid-amount-2" placeholder="Your Bid">
+        <button id="place-bid-2">Place Bid</button>
+    </div>
+
+    <script>
+        const startingPrice2 = 169;
+        const biddingTime2 = 180; // In seconds
+        let currentBid2 = startingPrice2;
+        let timer2 = biddingTime2;
+        let timerInterval2;
+
+        function updateTimer2() {
+            const minutes = Math.floor(timer2 / 60);
+            const seconds = timer2 % 60;
+            const timerElement = document.getElementById("timer-2");
+            timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function startAuction2() {
+            updateTimer2();
+            const timerInterval2 = setInterval(() => {
+                if (timer2 === 0) {
+                    clearInterval(timerInterval2);
+                    alert("Auction for shubham has ended.");
+                    disableBidding2();
+                } else {
+                    timer2--;
+                    updateTimer2();
+                }
+            }, 1000);
+        }
+        function disableBidding2() {
+            const bidInput = document.getElementById("bid-amount-2");
+            const bidButton = document.getElementById("place-bid-2");
+
+            bidInput.disabled = true;
+            bidButton.disabled = true;
+                    
+     }
+
+        document.getElementById("current-bid-2").textContent = `₹${startingPrice2}`;
+
+        document.getElementById("place-bid-2").addEventListener("click", () => {
+            const bidAmount = parseFloat(document.getElementById("bid-amount-2").value);
+            if (bidAmount > currentBid2) {
+                currentBid2 = bidAmount;
+                document.getElementById("current-bid-2").textContent = `₹${currentBid2}`;
+            } else {
+                alert("Your bid  must be higher than the current bid.");
+            }
+        });
+
+        startAuction2();
+    </script>
+
+    <div class="auction-container-col">
+        <div class="strip">
+        <h1>Marshall Speaker</h1>
+        </div>
+        <img src="./img/mar.png">
+        <p>BID START FROM: ₹60000</p>
+        <p>Current Bid: <span id="current-bid-3">₹60000</span></p>
+        <p>AUCTION ENDS ON: <span id="timer-3">00:00</span></p>
+        <input type="number" id="bid-amount-3" placeholder="Your Bid">
+        <button id="place-bid-3">Place Bid</button>
+    </div>
+
+    <script>
+        const startingPrice3 = 60000;
+        const biddingTime3 = 60; // In seconds
+        let currentBid3 = startingPrice3;
+        let timer3 = biddingTime3;
+        let timerInterval3;
+
+        function updateTimer3() {
+            const minutes = Math.floor(timer3 / 60);
+            const seconds = timer3 % 60;
+            const timerElement = document.getElementById("timer-3");
+            timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function startAuction3() {
+            updateTimer3();
+            const timerInterval3 = setInterval(() => {
+                if (timer3 === 0) {
+                    clearInterval(timerInterval3);
+                    alert("Auction For Marshal Speaker has ended.");
+                    disableBidding3();
+                } else {
+                    timer3--;
+                    updateTimer3();
+                }
+            }, 1000);
+        }
+         function disableBidding3() {
+            const bidInput = document.getElementById("bid-amount-3");
+            const bidButton = document.getElementById("place-bid-3");
+
+            bidInput.disabled = true;
+            bidButton.disabled = true;
+                    
+     }
+
+        document.getElementById("current-bid-3").textContent = `₹${startingPrice3}`;
+
+        document.getElementById("place-bid-3").addEventListener("click", () => {
+            const bidAmount = parseFloat(document.getElementById("bid-amount-3").value);
+            if (bidAmount > currentBid3) {
+                currentBid3 = bidAmount;
+                document.getElementById("current-bid-3").textContent = `₹${currentBid3}`;
+            } else {
+                alert("Your bid must be higher than the current bid.");
+            }
+        });
+
+        startAuction3();
+    </script>
+
+
+</div>
+</div>
+
+    <div class="auc-U">
+        <h3 style="padding: 30px;"><i class="fa fa-grip-lines" style="font-size: 30px;"></i>&ensp; UPCOMING AUCTION &ensp;<i class="fa fa-grip-lines" style="font-size: 30px;"></i></h3>
+         <div class="auction-container-row">
+            <div class="auction-container-col">
+                <img src="./img/raj.png">
+                <div class="strip">
+                <h1>RAJDOOT RANGER</h1>
+                </div>
+                <p>BID START FROM: 50000</p>
+                <p>Starts on: 30-11-2023 10:00 AM</p>
+                <p id="timer-upcoming-Upcoming-Auction-1">Calculating...</p>
+            </div>
+
+            <div class="auction-container-col">
+                <img src="./img/bud.png">
+                <div class="strip">
+                <h1>NOTHING BUD</h1>
+                </div>
+                <p>BID START FROM: 5000</p>
+                <p>Starts on: 26-11-2023 03:30 PM</p>
+                <p id="timer-upcoming-Upcoming-Auction-2">Calculating...</p>
+            </div>
+        </div>
+    </div>
+<script>
+        // Function to calculate the remaining days until the auction starts
+        function calculateDaysUntilStart(startDate) {
+            const currentDate = new Date();
+            const auctionStartDate = new Date(startDate);
+            const timeDifference = auctionStartDate.getTime() - currentDate.getTime();
+            const daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+            return daysDifference;
+        }
+
+        // Function to update the timer for upcoming auctions
+        function updateTimerForUpcomingAuctions() {
+            const upcomingAuctions = [
+                { name: "Upcoming Auction 1", startDate: "2023-12-01T10:00:00" },
+                { name: "Upcoming Auction 2", startDate: "2023-12-05T15:30:00" },
+                // Add more upcoming auctions as needed
+            ];
+
+            upcomingAuctions.forEach(auction => {
+                const timerElement = document.getElementById(`timer-upcoming-${auction.name.replace(/\s+/g, '-')}`);
+                const daysUntilStart = calculateDaysUntilStart(auction.startDate);
+
+                if (daysUntilStart > 0) {
+                    timerElement.textContent = `${daysUntilStart} days until start`;
+                } else {
+                    timerElement.textContent = "Auction starting soon!";
+                }
+            });
+        }
+        updateTimerForUpcomingAuctions();
+    </script>
+
+
+    </div>
+
+</section>
+
+                        <!-- footer -->
+
+<section class="footer">
+    <img src="./img/logo2.png">
+    <div class="container">
+    <div class="row">
+        <div class="col">
+            <h4>Company</h4>
+            <ul>
+                    <li><a href="#"></a>about us</li>
+                    <li><a href="#"></a>our services</li>
+                    <li><a href="#"></a>privacy policy</li>
+
+                </ul>
+
+        </div>
+        <div class="col">
+            <h4>get help</h4>
+                <ul>
+                    <li><a href="#"></a>FAQs</li>
+                    <li><a href="#"></a>shipping</li>
+                    <li><a href="#"></a>order status</li>
+                    <li><a href="#"></a>payment options</li>
+                </ul>
+
+        </div>
+        <div class="col">
+            <h4>shop</h4>
+                <ul>
+                    <li><a href="#"></a>Arts</li>
+                    <li><a href="#"></a>Fashion</li>
+                    <li><a href="#"></a>Homes</li>
+                    <li><a href="#"></a>Motors</li>
+                    <li><a href="#"></a>Real Estate</li>
+                    <li><a href="#"></a>Electronics</li>
+
+                </ul>
+
+        </div>
+        <div class="col">
+         <h4>follow us</h4>
+                <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+                <a href="#"><i class="fa-brands fa-twitter"></i> </a>
+                <a href="#"><i class="fa-brands fa-instagram"></i> </a><a href="#"><i class="fa-brands fa-linkedin"></i> </a>
+            </div>
+    </div>
+    </div>
+</div>
+   
+</section>
+ 
+</body>
+</html>

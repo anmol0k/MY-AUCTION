@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+	<title>login</title>
+</head>
+<style type="text/css">
+	
+* {
+	margin: 0;
+	padding: 0;
+	font-family:sans-serif ;
+}
+.hero{
+	height: 100%;
+	width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(./img/auc2.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    
+}
+.form-box{
+	width: 520px;
+	height: 480px;
+	position: relative;
+	margin: 0% auto;
+	background: transparent;
+	border: 2px  solid rgba(255, 255, 255, .2);
+	backdrop-filter: blur(20px);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+	color: #fff;
+	border-radius: 10px;
+	padding: 5px;
+	overflow: hidden;
+
+}
+.home a{
+	color: black;
+	
+}
+.button-box{
+	width: 220px;
+	margin: 35px auto;
+	position: relative;
+	box-shadow: 0 0 30px 20px #ff61241f;
+	border-radius: 30px;
+
+}
+.toggle-btn{
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	border: 0px;
+	outline: none;
+	position: relative;
+
+}
+#btn{
+	top: 0;
+	left:0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: linear-gradient(to right, #ff105f,#ffad06);
+	border-radius: 30px;
+	transition: .5s;
+}
+.input-group{
+	top: 120px;
+	position: absolute;
+	width: 300px;
+	transition: .3s;
+
+}
+.input-field{
+	width: 100%;
+	padding: 10px 0;
+	margin: 10px 0;
+	border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background: transparent;
+    font-weight: 700;
+
+}
+
+.submit-btn{
+	width: 85%;
+	padding: 10px 0px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: #DF6A18;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
+.check-box{
+	margin: 30px 10px 30px 0;
+
+}
+span{
+	color: #ccc;
+	font-size: 15px;
+	bottom: 64px;
+	position: absolute;
+}
+.input-group  a{
+	color: #ccc;
+	font-size: 15px;
+	bottom: 64px;
+	position: absolute;
+	margin-left: 150px;
+	
+}
+/* input row */
+.input-group .input-row{
+	width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+.input-group .input-row .input-field{
+    flex-basis: 48%;
+
+
+
+}
+
+.input-group .input-row input{
+    background: transparent;
+    width: 50%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none ;
+    padding-bottom: 5px;
+
+}
+/*img*/
+
+img{
+    width: 150px;
+    border-radius: 50px;
+}
+
+
+#login{
+	left: 120px;
+}
+#register{
+	left: 530px;
+}
+</style>
+<body>
+	<div class="hero">
+            <img src="./img/logo2.png">
+        
+		<div class="form-box">
+		<div class="home"><a href="auction.html"><i class="fa-solid fa-2x fa-house"></i></a></div>
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" onclick="login()">Log In</button>
+				<button type="button" class="toggle-btn" onclick="register()">Register</button>
+			</div>
+	<!-- login -->
+		<form id="login" class="input-group">
+				<input type="text" class="input-field"  placeholder="USERNAME" required>
+
+				<input type="password" class="input-field" placeholder="PASSWORD" required>
+				 
+				<input type="checkbox" class="check-box"><span>Remember me</span> 
+				<a href="#">Forgot Password?</a>
+			<button type="submit" class="submit-btn">Login</button>	
+		</form>
+		<form id="register" class="input-group">
+			<div class="input-row">
+				<input type="text" class="input-field" placeholder="FIRST NAME" required>
+			
+				<input type="text" class="input-field" placeholder="LAST NAME" required>
+			</div>	
+			<div class="input-row">
+				<input type="username" class="input-field" placeholder="CHOOSE USERNAME" required>
+
+				<input type="password" class="input-field" placeholder="CHOOSE PASSWORD" required>
+			</div>
+			<div class="input-row">
+				<input type="email" class="input-field" placeholder="YOUR EMAIL">
+
+				<label>+91<input type="number" class="input-field" placeholder=" 000 000 0000" required></label>
+			</div> 
+
+        
+        <input type="checkbox" class="check-box"><span> I Accept the Terms And Condition.</span> 
+        
+        <button type="submit" class="submit-btn">Register</button>
+		</form>
+
+</div>
+</div>
+
+
+		<script>
+			var x = document.getElementById("login");
+			var y = document.getElementById("register");
+			var z = document.getElementById("btn");
+
+			function register(){
+				x.style.left = "-500px";
+				y.style.left = "70px";
+				z.style.left = "110px";
+			}
+			function login(){
+				x.style.left = "120px";
+				y.style.left = "550px";
+				z.style.left = "0px";
+			}
+			</script>
+</body>
+</html>

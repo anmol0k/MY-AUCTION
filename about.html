@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+	<title>about us</title>
+</head>
+
+<style type="text/css">
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 50px;
+    background: #3d4d65;
+    z-index: 3;
+    padding: 20px 0 0;
+    position: relative;
+    }
+img{
+    margin-top: -20px;
+    height: 60pxpx;
+    width: 120px;
+    float: left;
+}
+.nav{
+    flex: 1;
+    text-align: center ;
+    color: black;
+    text-align: right;
+}
+.nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    margin-bottom: 60px;
+}
+.nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #1B0F3B ;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav ul li:hover::after{
+    width: 100%;
+}
+
+.abt h3{
+    color: #525256;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 36px;
+    font-weight: 600;
+}
+.abt-col{
+    padding: 10px;
+    font-size: 20PX;
+}
+.abt-col{
+    flex-basis: 31%;
+    background: #FAFCFD ;
+    border-radius: 10px;
+    border-bottom: 5%;
+    padding: 0px 25px;
+    box-sizing: border-box;
+    border-color: #D0D3D6;
+}
+p{
+    font-weight: 400;
+   margin: 10px 0; 
+}
+.team{
+    height: 290px;
+    border: 2px solid #fff;
+    padding: 20px;
+}
+.team h3 span{
+    position: relative;
+    display: block;
+    padding-bottom: 2PX;
+}
+.team h3 span:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 215px;
+    height: 3px;
+    background: #ff9948;
+}
+
+.team h3{
+    text-align:center;
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 0 0 3px;
+    color: #525256;
+    font-family: "Roboto Condensed", Helvetica,Arial,sans-serif;
+}
+.team-col{
+    border-block: grey;
+    height: 90px;
+    width: 241px;
+    flex-basis: 88%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    text-align: left;
+    background: #fff3f3;
+    cursor: pointer;
+    display: inline-block;
+    padding: 20px;
+  
+}
+.team-col img{
+    margin-top: 20px;
+    height: 60px;
+    width: 80px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+    background-size: cover;
+}
+.team-col h3{
+    text-align:left;
+    font-size: 15px;
+    line-height: 1.2;
+    margin: 0 0 15px;
+    color: #525256;
+    font-family: "Roboto Condensed", Helvetica,Arial,sans-serif;
+}
+  /* footer */
+
+
+
+.footer{
+    height: 115px;
+    background: #3d4d65;
+    position: relative;
+    z-index: 3;
+    padding: 70px 0 0;
+}
+.footer img{
+    margin-top: -70px;
+    height: 170px;
+    width: 300px;
+    float: left;
+}
+.footer .container{
+    max-width: 1150px;
+    margin: auto;
+}
+.footer .row{
+    margin-top: -45px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container ul{
+   list-style: none; 
+   cursor: pointer;
+    color: #DFDFE2 ;
+
+}
+.footer .container .col{
+    width: 20%;
+    padding: 0 10px;
+}
+.row .col h4{
+    font-size: 15px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+}
+.row .col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 60px;
+}
+.row .col ul li:not(:last-child){
+    margin-bottom: 2.5px;
+}
+.row .col ul li {
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.row .col ul li:hover{
+    color: #ffffff;
+    padding-left: 10px;
+}
+.col .social-links a{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 5px 5px 0;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+</style>
+<body>
+    <section class="header">
+            <nav>
+                <img src="./img/logo2.png">
+                <div class="nav" id="nav">
+                    <ul>
+                    <li><a href="auction.html">HOME</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="auctionB.html">AUCTION HUB</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </section>
+
+ <section class="abt">
+
+        <h3 style="padding: 30px;"><i class="fa fa-grip-lines" style="font-size: 30px;"></i>&ensp; ABOUT US &ensp;<i class="fa fa-grip-lines" style="font-size: 30px;"></i><h3>
+</section> 
+        <div class="abt-col">
+            <p>Welcome to Our Auction Website, where we redefine the online auction experience.Our journey began with a vision to create a platform that connects enthusiasts, collectors,and bidders from around the world. Our mission is to provide a transparent, secure, and customer-centric environment for buying and selling prized collectibles and unique items.
+            Our Online Auction Website is a labor of love inspired by a lifelong passion for collectibles. Our dedicated team of professionals, including developers, designers, and customer support staff, works tirelessly to ensure your satisfaction. At Our Auction Website, we take pride in our commitment to transparency, security, and social responsibility. We are transparent about our auction processes,and data handling practices. Your trust and security are paramount to us, and we implement stringent measures to protect your personal and financial information. We believe in giving back to the community, and we are involved in various social initiatives. We are delighted to have achieved numerous milestones and received accolades along the way, thanks to our wonderful community of users. Your feedback, satisfaction, and trust are the driving forces behind everything we do.Thank you for choosing Our Auction Website , and we look forward to serving your auction needs with excellence.<br><b>Your auction adventure starts here!</b> <a href="auctionB.html">AUCTION HUB</a> </p> 
+        </div>
+<!-- team -->
+
+<section class="team">
+    <h3><span>OUR TEAM</span></h3>
+
+    <div class="row">
+        <div class="team-col">
+            <img src="./img/team1.jpg">  
+            <div>
+            <p>Developer And Team Head</p>
+            <h3>ANMOL KUMAR</h3>
+            </div>
+        </div>
+        <div class="team-col">
+            <img src="./img/team2.jpg">  
+            <div>
+            <p> WebMaster</p>
+            <h3>PRAFFUL THAKUR</h3>
+            </div>
+        </div>
+        <div class="team-col">
+            <img src="./img/team3.jpg">
+            <div>  
+            <p>Customer Support Staff</p>
+            <h3>SHUBHAM JHA</h3>
+            </div>
+        </div>
+        <div class="team-col">
+            <img src="./img/team4.jpg">
+            <div>
+            <p>Technichal Support Staff 24x7 </p>
+            <h3>PREETISH KAD</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+
+<section class="footer">
+    <img src="./img/logo2.png">
+    <div class="container">
+    <div class="row">
+        <div class="col">
+            <h4>Company</h4>
+            <ul>
+                    <li><a href="#"></a>about us</li>
+                    <li><a href="#"></a>our services</li>
+                    <li><a href="#"></a>privacy policy</li>
+
+                </ul>
+
+        </div>
+        <div class="col">
+            <h4>get help</h4>
+                <ul>
+                    <li><a href="#"></a>FAQs</li>
+                    <li><a href="#"></a>shipping</li>
+                    <li><a href="#"></a>order status</li>
+                    <li><a href="#"></a>payment options</li>
+                </ul>
+
+        </div>
+        <div class="col">
+            <h4>shop</h4>
+                <ul>
+                    <li><a href="#"></a>Arts</li>
+                    <li><a href="#"></a>Fashion</li>
+                    <li><a href="#"></a>Homes</li>
+                    <li><a href="#"></a>Motors</li>
+                    <li><a href="#"></a>Real Estate</li>
+                    <li><a href="#"></a>Electronics</li>
+
+                </ul>
+
+        </div>
+        <div class="col">
+         <h4>follow us</h4>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+                <a href="#"><i class="fa-brands fa-twitter"></i> </a>
+                <a href="#"><i class="fa-brands fa-instagram"></i> </a><a href="#"><i class="fa-brands fa-linkedin"></i> </a>
+            </div>
+    </div>
+    </div>
+</div>
+   
+</section>
+</body>
+</html>

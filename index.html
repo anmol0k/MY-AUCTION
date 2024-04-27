@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>ONLINE AUCTION SYSTEM</title>
+    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <img src="./img/logo2.png">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="auctionB.html">AUCTION HUB</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    <div class="text-box">
+        <h1>Let Auction Begins</h1>
+        <h1>The Ultimate Bidding Strategy</h1>
+        <a href="" class="hero-btn">Visit Us To Know More</a>
+    </div>
+    </section>
+                                        <!--------- Feature ------>
+<section class="feature">
+    <h2>Main Features Of e-Auction, e-Bidding</h2>
+
+    <div class="feature-row">
+        <div class="feature-col">
+            <div class="m1 " style="background-color: #1592eD;">
+                <i class="fa-solid fa-gavel fa-rotate-270"></i> </div> 
+        <h3>User Friendly Bidding Platform</h3>
+        <p>Placing a bid, or live auction any item on our platform is quite an <b>easy process</b>. You just have to register yourself and rest assured that you are managed by Auction Desk</p>
+        </div>
+        <div class="feature-col">
+            <div class="m1" style="background-color: rgb(249, 88, 88);">
+                <i class="fa-solid fa-mobile"></i></div>
+            <h3>Mobile Apps For Suppliers</h3>
+            <p>Our e-auction solutions enable fastest onboarding of Suppliers, giving the clients a dynamic gateway to sell or procure products in a few clicks.</p>
+            </div>
+         <div class="feature-col">
+            <div class="m1" style="background-color: rgb(74, 186, 56);">
+                <i class="fa-solid fa-hourglass-end"></i> </div>
+            <h3>Real-Time Countdown Timer</h3>
+            <p>Display a countdown timer next to each auction item, showing the time remaining until the auction ends. This creates a sense of urgency and informs users of the exact time when the bidding will close.</p>
+        </div>
+    </div>
+
+</section> 
+ <!----- rules ---->
+    <section class="rules">
+           <img src="./img/aucB.png">
+        <h2><span>Online Auction Rules</span></h2>
+    <ul class="rules-col">
+        <li style="padding: 0px;"><i class="fa fa-caret-right" style="font-size: 20px;"></i>&nbsp;&nbsp;One User Account Per Person / IP Address / House is allowed</li>
+        <li style="padding: 0px;"><i class="fa fa-caret-right" style="font-size: 20px;"></i>&nbsp;&nbsp;Group Bidding is strictly not allowed  </li>
+        <li style="padding: 0px;"><i class="fa fa-caret-right" style="font-size: 20px;"></i>&nbsp;&nbsp;Do not use any 3rd party bidding softwares of bots for bidding </li>
+        <li style="padding: 0px;"><i class="fa fa-caret-right" style="font-size: 20px;"></i>&nbsp;&nbsp;Misleading USER IDs are not allowed - Please don't try your tricks</li>
+        <li style="padding: 0px;"><i class="fa fa-caret-right" style="font-size: 20px;"></i>&nbsp;&nbsp;Violation of rules will result in Suspension of your account</li>
+    </ul>
+</section>
+<!-- footer -->
+<section class="footer">
+    <img src="./img/logo2.png">
+    <div class="container">
+    <div class="row">
+        <div class="col">
+            <h4>Company</h4>
+            <ul>
+                    <li><a href="#"></a>about us</li>
+                    <li><a href="#"></a>our services</li>
+                    <li><a href="#"></a>privacy policy</li>
+
+                </ul>
+
+        </div>
+        <div class="col">
+            <h4>get help</h4>
+                <ul>
+                    <li><a href="#"></a>FAQs</li>
+                    <li><a href="#"></a>shipping</li>
+                    <li><a href="#"></a>order status</li>
+                    <li><a href="#"></a>payment options</li>
+                </ul>
+
+        </div>
+        <div class="col">
+            <h4>shop</h4>
+                <ul>
+                    <li><a href="#"></a>Arts</li>
+                    <li><a href="#"></a>Fashion</li>
+                    <li><a href="#"></a>Homes</li>
+                    <li><a href="#"></a>Motors</li>
+                    <li><a href="#"></a>Real Estate</li>
+                    <li><a href="#"></a>Electronics</li>
+
+                </ul>
+
+        </div>
+        <div class="col">
+         <h4>follow us</h4>
+                <div class="social-links">
+                <a href=""><i class="fa-brands fa-facebook"></i> </a>
+                <a href=""><i class="fa-brands fa-twitter"></i> </a>
+                <a href=""><i class="fa-brands fa-instagram"></i> </a>
+                <a href=""><i class="fa-brands fa-linkedin"></i> </a>
+            </div>
+    </div>
+    </div>
+</div>
+
+</section>
+
+ <!--------javascript for toggle menu------>
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0px";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+</body>
+</html>
